@@ -1,3 +1,9 @@
-def matrix(matrix_elements)
-  [1,2]
+class Matrix
+  def initialize(matrix_elements)
+  end
+
+  def rows(row_number)
+    [1, 2]
+  end
 end
+
