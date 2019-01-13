@@ -3,21 +3,24 @@ class Matrix
     row_number = 0
     @mat = Array.new
     (matrix_elements.split "\n").each do |row|
-      @mat[row_number] = row
+      @mat << row
       row_number += 1
     end
   end
 
   def rows(row_number)
     row = Array.new
-    (@mat[0].split " ").each do |element|
+    (@mat[row_number].split " ").each do |element|
       row << element.to_i
     end
     row
   end
 
   def columns(column_number)
-    [1, 4, 7, 8]
+    column = Array.new
+    @mat.each do |row|
+      column << ((row.split " ")[column_number]).to_i
+    end
+    column
   end
 end
-
