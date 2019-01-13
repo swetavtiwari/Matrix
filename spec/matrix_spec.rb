@@ -10,4 +10,10 @@ describe 'matrix.rb' do
       expect(matrix.rows(0)).to eq [9, 7]
     end
   end
+  context 'extract a column from a matrix' do
+    it 'return [1,4,7,8] for the input "1 2 3\n4 5 6\n7 8 9\n 8 7 6" ' do
+      matrix = Matrix.new("1 2\n 10 20")
+      expect(matrix.columns(0)).to eq [1, 4, 7, 8]
+    end
+  end
 end
